@@ -70,6 +70,7 @@ export class SearchCarousel extends LitElement {
         }
         const params = {
             // inject same style to shadow DOM
+            initialSlide: 5, // always start from the middle
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
@@ -148,6 +149,8 @@ export class SearchCarousel extends LitElement {
                     
                     .gallery-container h2 {
                         text-align: center;
+                        text-decoration: underline;
+                        margin-bottom: 30px;
                     }
                     
                     .swiper {
@@ -203,9 +206,10 @@ export class SearchCarousel extends LitElement {
                     
                     .swiper-button-prev, .swiper-button-next {
                         &:hover,&:focus {
-                            background-color: black;
+                            // background-color: black;
                             &:after {
-                            color: white;
+                            color: black;
+                            font-weight: bolder;
                             }
                         }
                     }
