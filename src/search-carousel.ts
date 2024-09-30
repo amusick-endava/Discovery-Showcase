@@ -70,6 +70,7 @@ export class SearchCarousel extends LitElement {
         }
         const params = {
             // inject same style to shadow DOM
+            initialSlide: 5, // always start from the middle
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
